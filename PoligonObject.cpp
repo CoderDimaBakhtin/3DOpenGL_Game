@@ -125,7 +125,7 @@ void PoligonObject::Paint() {
 }
 
 PoligonObject::~PoligonObject() {
-	//std::cout << "~PoligonObject";
+	
 	if(data != nullptr)
 	stbi_image_free(data);
 

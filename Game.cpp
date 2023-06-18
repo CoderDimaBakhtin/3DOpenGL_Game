@@ -120,7 +120,7 @@ int Game::GameProcess() {
     
     glScalef((float)Screen_Height / (float)Screen_Width, 1, 1);//Scaling
 
-    player->Execute();//move+paint
+    player->Execute(map);//move+paint
 
     map->paint();
 

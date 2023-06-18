@@ -1,4 +1,4 @@
-﻿  GameFunctions.cpp
+﻿  Map.cpp
 D:\glt\include\glad\glad.h(326,1): warning C4005: 'GL_ALL_ATTRIB_BITS': macro redefinition
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\GL\gl.h(107): message : see previous definition of 'GL_ALL_ATTRIB_BITS'
 D:\glt\include\glad\glad.h(414,1): warning C4005: 'GL_LOGIC_OP': macro redefinition
@@ -7,9 +7,34 @@ D:\glt\include\glad\glad.h(498,1): warning C4005: 'GL_TEXTURE_COMPONENTS': macro
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\GL\gl.h(1153): message : see previous definition of 'GL_TEXTURE_COMPONENTS'
 D:\glt\include\glad\glad.h(592,1): warning C4005: 'GL_CLIENT_ALL_ATTRIB_BITS': macro redefinition
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\GL\gl.h(973): message : see previous definition of 'GL_CLIENT_ALL_ATTRIB_BITS'
+C:\Users\ta_tbI_wo\source\repos\game\game\Map.cpp(30,24): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\ta_tbI_wo\source\repos\game\game\Map.cpp(30,19): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\ta_tbI_wo\source\repos\game\game\Map.cpp(40,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\ta_tbI_wo\source\repos\game\game\Map.cpp(40,27): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(149,77): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2006): message : see reference to function template instantiation 'void std::_Construct_in_place<_Ty,const char(&)[10],int,int,int,int,int>(_Ty &,const char (&)[10],int &&,int &&,int &&,int &&,int &&) noexcept(false)' being compiled
+          with
+          [
+              _Ty=PoligonObject
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2725): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<const char(&)[10],int,int,int,int,int>(const char (&)[10],int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=PoligonObject
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2726): message : see reference to function template instantiation 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<const char(&)[10],int,int,int,int,int>(const char (&)[10],int &&,int &&,int &&,int &&,int &&)' being compiled
+          with
+          [
+              _Ty=PoligonObject
+          ]
+C:\Users\ta_tbI_wo\source\repos\game\game\Map.cpp(9): message : see reference to function template instantiation 'std::shared_ptr<PoligonObject> std::make_shared<PoligonObject,const char(&)[10],int,int,int,int,int>(const char (&)[10],int &&,int &&,int &&,int &&,int &&)' being compiled
   Generating code
-  4 of 478 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
+  2 of 481 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    12 functions had inline decision re-evaluated but remain unchanged
+    10 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   game.vcxproj -> C:\Users\ta_tbI_wo\source\repos\game\x64\Release\game.exe

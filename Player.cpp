@@ -1,8 +1,8 @@
 #include "Player.h"
 
 
-void Player::Execute() {//move+paint
-    this->move();
+void Player::Execute(std::shared_ptr<Map> map) {//move+paint
+    this->move(map);
     this->paint();
 
 }
@@ -19,7 +19,7 @@ void Player::SetFieldHeight(int height) {
 
 
 //Human
-void Human::move() {
+void Human::move(std::shared_ptr<Map> map) {
     POINT p;
     GetCursorPos(&p);
     
@@ -57,6 +57,10 @@ void Human::move() {
         xCor += xSpeed * cos(((2.f * 3.1415) / 360.f) * (beta));
         yCor -= ySpeed * sin(((2.f * 3.1415) / 360.f) * (beta));
     }
+    
+    MapInteraction(map);
+   
+
     //////////////////////////////////////
     static float h = 0;
     static float c = 0;
@@ -80,12 +84,21 @@ void Human::move() {
   
     
     glTranslatef(0, 0, -5.5);
-    glTranslatef(-xCor/3.0, -yCor/3.0, 0);
+    glTranslatef(-xCor, -yCor, 0);
 
     
     
 }
 
+
+void Player::MapInteraction(std::shared_ptr<Map> map) {
+    //Boarders checking
+    if (xCor > map->GetHeight()) { xCor = map->GetHeight(); }
+    if (yCor > map->GetWidth()) { yCor = map->GetWidth(); }
+    if (xCor < 0) { xCor = 0; }
+    if (yCor < 0) { yCor = 0; }
+    //
+}
 
 Player::Player() {
 
@@ -107,7 +120,7 @@ void Human::paint() {
     static int counter = 0;
     static int i = 0;
     glPushMatrix();
-    glTranslatef(xCor / 3.0, yCor / 3.0, 0);
+    glTranslatef(xCor, yCor, 0);
     
     glRotatef(-beta, 0, 0, 1);
  

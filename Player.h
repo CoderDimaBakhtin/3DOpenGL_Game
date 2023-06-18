@@ -7,6 +7,7 @@
 
 #include"Header.h"
 #include"Figures.h"
+#include "Map.h"
 
 class Player {
 protected:
@@ -14,18 +15,21 @@ protected:
     float beta = 0.f;
     float xCor = 0, yCor = 0, zCor = 0;
     GLFWwindow* window;
-    float xSpeed = 0.5, ySpeed = 0.5;
+    float xSpeed = 0.5*0.3, ySpeed = 0.5*0.3;
     
     int width, height;
+
+
+    void MapInteraction(std::shared_ptr<Map> map);
 public:
     
-    virtual void move() = 0;
+    virtual void move(std::shared_ptr<Map> map) = 0;
     virtual void paint() = 0;
     Player();
     
 
 
-    void Execute();//move+paint
+    void Execute(std::shared_ptr<Map> map);//move+paint
 
     void SetFieldWidth(int width);
     void SetFieldHeight(int height);
@@ -37,7 +41,7 @@ public:
 //Human
 class Human :public Player {
 private:
-    void move();
+    void move(std::shared_ptr<Map> map);
     void paint();
     std::vector<std::shared_ptr<PoligonObject>> skin_move;
    

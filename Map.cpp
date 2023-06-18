@@ -34,19 +34,22 @@ void Map::paint() {
 	}
 	
 	for (int k = 0; k < 1; k++) {
-		for (int i = 0; i < 2; i++) {
-			for (int j = 0; j < 2; j++) {
+		for (int i = 0; i < 1; i++) {
+			for (int j = 0; j < 1; j++) {
 				//PaintCube(poligon[2], 5 + i * 0.5, 5 + j * 0.5, k*0.5);
-				PaintCube(poligon[1], 0, 0, 0);
+				PaintCube(poligon[1], i, j, 0);
 			}
 		}
 	}
 	
-	
+}
 
-	
-	
-	
+int Map::GetWidth() {
+	return width;
+}
+
+int Map::GetHeight() {
+	return height;
 }
 
 Map::~Map() {

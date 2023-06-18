@@ -17,10 +17,13 @@
 class Map{
 private:
 	std::vector<std::shared_ptr<PoligonObject>> poligon;
+	int width = 20, height = 20;
 public:
 	Map();
 	void paint();
 
+	int GetWidth();
+	int GetHeight();
 
     ~Map();
 
