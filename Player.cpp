@@ -97,6 +97,7 @@ void Player::MapInteraction(std::shared_ptr<Map> map) {
     if (yCor > map->GetWidth()) { yCor = map->GetWidth(); }
     if (xCor < 0) { xCor = 0; }
     if (yCor < 0) { yCor = 0; }
+    
     //
 }
 

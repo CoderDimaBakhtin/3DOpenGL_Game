@@ -4,7 +4,7 @@
 
 #include<memory>
 #include"PoligonObject.h"
-
+class PoligonObject;
 void PaintCube(std::shared_ptr<PoligonObject> poligon, float xCor, float yCor, float zCor);
 
 void PaintRect(std::shared_ptr<PoligonObject> poligon, float xCor, float yCor, float zCor);

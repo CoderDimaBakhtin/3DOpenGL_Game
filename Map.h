@@ -13,7 +13,7 @@
 #include"Figures.h"
 #include<vector>
 
-
+class PoligonObject;
 class Map{
 private:
 	std::vector<std::shared_ptr<PoligonObject>> poligon;
